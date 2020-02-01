@@ -1,11 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Fira+Mono:regular);
 html,
 body {
   height: 100%;
 }
 
 body {
+  font-family: Fira Mono;
+  font-size: 2em;
   margin: 0;
-  display: flex;
+  display: inline;
 
   /* This centers our sketch horizontally. */
   justify-content: center;

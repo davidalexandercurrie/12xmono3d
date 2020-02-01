@@ -1,6 +1,7 @@
 let i = 0;
 let counter = 0;
 let playing = false;
+let status = "loading...";
 function preload() {
   speaker1 = new Howl({
     src: ["audio/12xmonobrowser-001.ogg"],
@@ -52,12 +53,13 @@ function preload() {
   });
 }
 function setup() {
-  createCanvas(400, 400);
+  // createCanvas(400, 400);
+  noCanvas();
+  document.getElementById("status").textContent = "Loading...";
 }
 function draw() {
-  background(200);
-  //wait 20sec
-  if (counter > 1200 && !playing) {
+  //wait 10sec
+  if (counter > 600 && !playing) {
     playing = true;
     play();
   }
@@ -65,6 +67,7 @@ function draw() {
 }
 
 function play() {
+  document.getElementById("status").textContent = "Playing!";
   console.log("playing");
   id1 = speaker1.play();
   id2 = speaker2.play();
