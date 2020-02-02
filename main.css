@@ -9,6 +9,7 @@ body {
   font-size: 2em;
   margin: 0;
   display: inline;
+  text-align: center;
   /* This centers our sketch horizontally. */
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -17,5 +18,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#status {
+  font-size: 1rem;
 }
 /*# sourceMappingURL=main.css.map */

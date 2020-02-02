@@ -9,10 +9,13 @@ body {
   font-size: 2em;
   margin: 0;
   display: inline;
-
+  text-align: center;
   /* This centers our sketch horizontally. */
   justify-content: center;
 
   /* This centers our sketch vertically. */
   align-items: center;
+}
+#status {
+  font-size: 1rem;
 }
