@@ -1,15 +1,15 @@
 let x = [];
 let z = [];
 for (let i = 0; i < 12; i++) {
-  x[i] = Math.random() * 5 - 2.5;
+  x[i] = Math.random() * 20 - 10;
 }
 for (let i = 0; i < 12; i++) {
-  z[i] = Math.random() * 5 - 2.5;
+  z[i] = Math.random() * 20 - 10;
 }
 let speakers = [
   new Howl({
     src: ["audio/12xmonobrowser-001.ogg"],
-    // src: ["audio/02 Dressed For Space.mp3"],
+    // src: ["audio/09 Lost Souls_Eelings.mp3"],
     preload: true
   }),
   new Howl({
@@ -65,13 +65,14 @@ function play() {
     speakers[i].pos(x[i], 0, z[i]);
     speakers[i].play();
   }
-  document.getElementById("status").textContent = "Playing";
-  console.log("playing");
+  console.log("ready to play");
+  playing = true;
 }
 
 Howler.pos(0, 0, 5);
 
 function listenerOrientation(rotation) {
+  // let rotation = 2 * Math.PI - (rad % (2 * Math.PI));
   var x = Math.cos(rotation);
   var y = 0;
   var z = Math.sin(rotation);
